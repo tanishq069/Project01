@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Hotspot - Nagpur, India</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 80vh; /* Set map height to 80% of viewport height */
+            width: 100%; /* Set map width to 100% of viewport width */
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crime Hotspot - Nagpur, India</h1>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([21.1458, 79.0882], 15); /* Adjust zoom level to 15 for better visibility */
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/relation/1991091#map=10/21.1665/79.0082">OpenStreetMap</a> contributors',
+            subdomains: ['a', 'b', 'c']
+        }).addTo(map);
+
+        
+        var crimeData = [
+            {lat: 21.1478, lng: 79.0882, crimes: 50},
+            {lat: 21.1500, lng: 79.0900, crimes: 35},
+            {lat: 21.1600, lng: 79.0850, crimes: 25}
+        ];
+
+        
+        crimeData.forEach(function(crime) {
+            L.marker([crime.lat, crime.lng])
+              .bindPopup('Crimes: ' + crime.crimes)
+              .addTo(map);
+        });
+    </script>
+</body>
+</html>

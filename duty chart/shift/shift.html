@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Duty Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Automatic Police Duty Scheduler</h1>
+        <div class="input-section">
+            <h3>Add Police Officers</h3>
+            <input type="text" id="officer-name" placeholder="Enter Officer Name">
+            <select id="weekly-off">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <button id="add-officer">Add Officer</button>
+        </div>
+        <div class="action-buttons">
+            <button id="generate-schedule">Generate Schedule</button>
+        </div>
+        <div id="schedule-output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

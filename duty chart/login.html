@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Officer Login</div>
+      <div class="title signup">Admin Login</div>
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login">Officer Login</label>
+        <label for="signup" class="slide signup">Admin Login</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form action="#" class="login" >
+          <div class="field">
+            <input type="email" placeholder="Email Address" name="email" id="email1" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" name="password" id="pass1" required>
+          </div>
+          <div class="pass-link"><a href="/forgot pass/fp.html">Forgot password?</a></div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <a href="/officer/officer.html" class="btn-layer" onclick="officer()">Login</a>
+          </div>
+          <div class="" >Not a member? <a href="/signup/signup.html">Signup now</a></div>
+        </form>
+        
+        <form action="#"  class="login">
+            <div class="field">
+              <input type="email" placeholder="Email Address" name="email" id="email2" required>
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Password" name="password" id="pass2" required>
+            </div>
+            <div class="pass-link"><a href="/forgot pass/fp.html">Forgot password?</a></div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <a href="/duty chart/to-do-List/index.html" class="btn-layer" onclick="admin()">Login</a>
+            </div>
+            <div class="">Not a member? <a href="/signup/signup.html">Signup now</a></div>
+          </form>
+      </div>
+    </div>
+    <script src="login.js"></script>
+    <script>
+      function admin(){
+        var email = document.getElementById('email2').value;
+        var pass = document.getElementById('pass2').value;
+
+        if(email =='admin@100gmail.com' && pass=='Admin@123'){
+          alert('Successfully Logged In!!!');
+          window.location.href="/index.html"
+        }
+        else{
+          alert('Please fill the details');
+        }
+      }
+    </script>
+
+    <script>
+      function officer(){
+        var email = document.getElementById('email1').value;
+        var pass = document.getElementById('pass1').value;
+
+        if(email =='officer@01gmail.com' && pass=='Officer@123'){
+          alert('Successful!!!');
+          window.location.href="/officer/officer.html"
+          
+        }
+        else{
+          alert('Please fill the details');
+        }
+      }
+    </script>
+
+
+  </div>
+</div>
