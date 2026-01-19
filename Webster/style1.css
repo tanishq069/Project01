@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300&family=Ysabeau+Infant:wght@600&display=swap');
+*{
+ padding:0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+/* Code for overlayout class
+.overlayout{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    
+    z-index: -1;
+    
+} */
+body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+/* From here start popup */
+
+.popup{
+    background: white;
+    width:46rem;
+    height:38rem;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 10px;
+    box-shadow: 0 5px 30px rgba(0,0,0,.30);
+    display:flex;
+    flex-direction: column;
+    
+ } 
+
+ .popup-main{
+    width: 100%;
+    height: 92%;
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+ }
+/* Hide the default radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Style for the custom radio buttons (as buttons) */
+.radio-button {
+  display: inline-block;
+  background-color: #ffd000;
+  border: 1px solid #000000;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  /* border-radius: 4px; */
+  padding: 8px 8px;
+  cursor: pointer;
+}
+.left-radio{
+  border-right-width: 0;
+  border-left-width: 2px;
+}
+.right-radio{
+  border-left-width: 0;
+  border-right-width: 2px;
+}
+
+/* Style for the selected custom radio buttons */
+.radio-button input[type="radio"]:checked + label{
+  background-color: #ffd000;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  text-decoration: none;
+}
+.radio-button input[type="radio"]+ label{
+  text-decoration: line-through;
+}
+
+
+ @media screen and (max-width:905px){
+ .popup{
+  height:65rem;
+ }
+  .popup-main{
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+  }
+ }
+ /* Taskbar of popup */
+ .taskbar{
+    width:100%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background:#ffd000;
+    color:white;
+    z-index: 1;
+} 
+.taskbar .name{
+    width: 200px;
+    margin-left: 2rem;
+    height: 2rem;
+    background-color: #fff;
+}
+
+/* This is first section of flex */
+ 
+ .datepicker{
+    padding-right: 10px;
+    
+ }
+
+ .leavedates{
+    display:flex;
+    justify-content: space-between;
+    max-width: 22rem;
+    height: 4rem;
+    border: 1px solid rgb(125, 125, 125);
+    padding:10px;
+    margin: 20px 0 10px 10px;
+    background-color: rgb(255, 255, 255);
+ }
+ .startdate{
+    display:flex;
+    flex-direction: column;
+}
+.lastdate{
+    display:flex;
+    flex-direction: column;
+}
+
+ .days{
+    
+    margin: 0 10px;
+    padding: 0 12px;
+ }
+
+#sdate,#ldate{
+    border: none;
+    font-size: 15px;
+    width: 110px;
+}
+.input{
+    width: 110px;
+}
+.timeperiod{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    margin-left: 10px;
+    font-size: 15px;
+    justify-content: center;
+    max-width: 22rem;
+
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px;
+    padding: 0 12px;
+}
+.item-l{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* changes made here */
+/* changes made here */
+/* changes made here */
+/* changes made here */
+
+/* changes made here */
+/* changes made here */
+/* changes made here */
+/* changes made here */
+.item-r{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.notice{
+    background:#ffd00062;
+    border: 2px solid #03ccfe;
+    width: 355px;
+    text-align: left;
+    margin-left: 10px;
+
+    padding: .3rem;
+}
+
+ 
+/* This is second subsection of Datepicker select leave type */
+ .leavetype{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+ }
+
+#leave{
+    width: 355px; 
+    font-size: 15px;   
+ }
+.select{
+    margin-bottom: .5rem;
+}
+.dropdown{
+    position: relative;
+    width: 100%;
+    height: 20px;
+    
+}
+.note{
+    margin-left: 10px;
+    margin-bottom:10px;
+    
+}
+.note textarea{
+    padding: 10px ;
+    
+}
+
+.notify{
+    margin-left: 10px;
+    margin-bottom:10px;  
+}
+.notify input{
+    padding: 5px ;
+}
+
+.para{
+    margin-top: 10px;
+    margin-left:5px;
+    max-width: 22rem;
+}
+#Employeesearch{
+    border: none;
+    border-bottom: 1px solid #656565;
+}
+
+/* changes made here */
+/* changes made here */
+/* changes made here */
+/* changes made here */
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  
+ 
+}
+#myUL{
+  position: absolute;
+  z-index: 1;
+  min-width:22rem;
+  display: none;
+}
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; 
+  display: block; 
+  
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #5c5656; 
+}
+
+/* changes made here */
+/* changes made here */
+/* changes made here */
+/* changes made here */
+.buttons{
+  display: flex;
+  justify-content:flex-end ;
+  gap: 10px;
+  
+}
+.cancel{
+    background: #f0eded;
+    color:black;
+    padding:5px 10px;
+    border: 1px solid;
+}
+.cancel:hover{
+  background: #717171;
+  border: 2px solid;
+  color: white;
+}
+.request{
+    background: #ffd000;
+    color:rgb(0, 0, 0);
+    padding:5px 10px;
+   
+    border: 1px solid;
+    border-radius: 25px;
+}
+
+.request{
+  background: #ffd000;
+  color:rgb(0, 0, 0);
+  padding:5px 10px;
+  border: 1px solid;
+  border-radius: 25px;
+}
+.request:hover{
+background: #f4d136;
+border-radius: 30px;
+border: 2px solid;
+}
+
+/* Thus is second section in flex which shows the calender */
+ #calender{
+    
+    padding:0 1px;
+    background-color: rgb(247, 247, 247);
+    width: 550px;
+ }
+ 
+ #calender{
+    font-size: 14px;
+    margin-top:20px;
+    margin-bottom: 10px;
+    
+  }
+  .calendar {
+    width: 330px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  .calendar h1{
+    font-weight: 700;
+    margin:1rem  2rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #ffd000;
+  }
+.header h2{
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 1% 20%;
+    color: #fff;
+}
+#prevBtn, #nextBtn{
+    background: #ffd000;
+    padding: .5rem 1rem;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+}
+  #calendarTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #calendarTable th {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  #calendarTable td {
+    text-align: center;
+    
+    padding: 10px;
+  }
+  #calendarBody{
+    font-family: 'Ysabeau Infant', sans-serif;;
+  }
+  #calendarTable .inactive {
+    color: #c9c9c9;
+  }
+  
+  #calendarTable td:hover {
+    background-color: #a19f9f;
+    cursor: pointer;
+  }
+  .labels{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* justify-content: space-between; */
+    margin-left: 2rem;
+  }
+  .labels .tags{
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .labels .tags .red{
+    background: #f70000;
+    color: rgb(255, 0, 0);
+  }
+  .labels .tags .orange{
+    background: #f90;
+    color: #f90;
+  }
+  .labels .tags .green{
+    background: #26ff00;
+    color: #26ff00;
+  }
